@@ -5,3 +5,39 @@
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
 }
+body {
+    height: 100vh;
+    background: linear-gradient(to bottom, #a770ef, #cf8bf3, #fdb99b);
+}
+.mainHeader {
+    width: 100vw;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.theNumber {
+    font-size: 120px;
+}
+button {
+    height: 30px;
+    width: 150px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+}
+footer {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
