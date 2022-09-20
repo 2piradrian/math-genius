@@ -49,7 +49,8 @@ const changeUpperLimit = () => {
 };
 const checkTurn = () => {
     if (turns <= 1) {
-        $theNumber.textContent = "😭";
+        console.log("Perdiste, que triste.");
+        $theNumber.textContent = "😎";
         resetGame();
     }
 };
