@@ -65,8 +65,8 @@ const checkGameState = () => {
 };
 const resetGame = () => {
     $playBtn.textContent = "¡Juguemos!";
-    limits = [1, 500];
+    limits = [1, 300];
     weArePlaying = false;
-    turns = 10;
+    turns = 12;
 };
 init();
