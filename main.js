@@ -27,6 +27,8 @@ const init = () => {
 const playNow = () => {
     $error.style.display = "none";
     $theNumber.textContent = `${getNumber()}`;
+    checkTurn();
+    console.log(limits[0], limits[1]);
 };
 const getNumber = () => {
     const min = Math.ceil(limits[0]);
@@ -40,22 +42,20 @@ const renderError = () => {
 const changeLowerLimit = () => {
     limits[1] = +$theNumber.textContent;
     turns--;
-    checkTurn();
 };
 const changeUpperLimit = () => {
     limits[0] = +$theNumber.textContent;
     turns--;
-    checkTurn();
 };
 const checkTurn = () => {
     if (turns <= 1) {
         console.log("Perdiste, que triste.");
-        $theNumber.textContent = "😎";
+        $theNumber.textContent = "😭";
         resetGame();
     }
 };
 const checkGameState = () => {
-    if (turns === 10) {
+    if (turns === 12) {
         playNow();
         turns--;
     } else {
@@ -65,7 +65,7 @@ const checkGameState = () => {
 };
 const resetGame = () => {
     $playBtn.textContent = "¡Juguemos!";
-    limits = [1, 1000];
+    limits = [1, 500];
     weArePlaying = false;
     turns = 10;
 };
