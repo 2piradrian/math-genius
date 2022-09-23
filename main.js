@@ -27,12 +27,12 @@ const init = () => {
 const playNow = () => {
     $error.style.display = "none";
     $theNumber.textContent = `${getNumber()}`;
-    checkTurn();
     console.log(limits[0], limits[1]);
+    checkTurn();
 };
 const getNumber = () => {
-    const min = Math.ceil(limits[0]);
-    const max = Math.floor(limits[1]);
+    const min = Math.ceil(limits[0] + 1);
+    const max = Math.floor(limits[1] - 1);
     const myNumber = Math.floor(Math.random() * (max - min + 1) + min);
     return myNumber;
 };
@@ -65,7 +65,7 @@ const checkGameState = () => {
 };
 const resetGame = () => {
     $playBtn.textContent = "¡Juguemos!";
-    limits = [1, 300];
+    limits = [0, 300];
     weArePlaying = false;
     turns = 12;
 };

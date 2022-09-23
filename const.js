@@ -6,4 +6,4 @@ const $error = document.querySelector("small");
 
 let weArePlaying = false;
 let turns = 12;
-let limits = [1, 300];
+let limits = [0, 300];
